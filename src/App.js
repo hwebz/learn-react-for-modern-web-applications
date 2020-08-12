@@ -12,6 +12,7 @@ import {
   } from './pages'
 import { NavBar } from './NavBar';
 import { FormsNavBar } from './FormsNavBar';
+import { CounterButtonPageCB } from './class-based';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
             <HomePage />
           </Route>
           <Route path="/counter">
-            <CounterButtonPage />
+            {/* <CounterButtonPage /> */}
+            <CounterButtonPageCB />
           </Route>
           <Route path="/people-list">
             <PeopleListPage />

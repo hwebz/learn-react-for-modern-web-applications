@@ -1,3 +1,6 @@
+// SHOULDN'T USE CLASS-BASED COMPONENTS
+// USE FUNCTIONAL COMPONENTS INSTEAD
+
 import React, { Component } from 'react';
 import { DisplayIf } from '../DisplayIf';
 
