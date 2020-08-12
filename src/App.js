@@ -1,6 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import { HomePage, CounterButtonPage, PeopleListPage, NotFoundPage } from './pages'
+import { 
+    HomePage,
+    CounterButtonPage,
+    PeopleListPage,
+    NotFoundPage,
+    ProtectedPage
+  } from './pages'
 
 function App() {
   return (
@@ -8,6 +14,7 @@ function App() {
       <Link to="/">Home</Link>
       <Link to="/counter?startingValue=2">Counter</Link>
       <Link to="/people-list">People List</Link>
+      <Link to="/protected">Protected Page</Link>
       <Switch>
         <Route path="/" exact>
           <HomePage />
@@ -17,6 +24,9 @@ function App() {
         </Route>
         <Route path="/people-list">
           <PeopleListPage />
+        </Route>
+        <Route path="/protected">
+          <ProtectedPage />
         </Route>
         <Route>
           <NotFoundPage />
