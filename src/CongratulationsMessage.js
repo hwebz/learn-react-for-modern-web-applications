@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { DisplayIf } from './DisplayIf';
 
 export const CongratulationsMessage = ({ numberOfClicks, threshold, onHide }) => {
 
@@ -6,11 +7,10 @@ export const CongratulationsMessage = ({ numberOfClicks, threshold, onHide }) =>
         return () => console.log('CongratulationsMessage unmounted!')
     }, [])
 
-    return numberOfClicks >= threshold
-        ? 
-        <>
+    return (
+        <DisplayIf condition={numberOfClicks >= threshold}>
             <h1>Congratulations! You've reached {threshold} number of clicks</h1>
             <button onClick={onHide}>Hide</button>
-        </>
-        : null;
+        </DisplayIf>
+    )
 }
