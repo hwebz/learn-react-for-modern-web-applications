@@ -6,12 +6,12 @@ function App() {
   return (
     <Router>
       <Link to="/">Home</Link>
-      <Link to="/counter/John">Counter</Link>
+      <Link to="/counter?startingValue=2">Counter</Link>
       <Link to="/people-list">People List</Link>
       <Route path="/" exact>
         <HomePage />
       </Route>
-      <Route path="/counter/:name">
+      <Route path="/counter">
         <CounterButtonPage />
       </Route>
       <Route path="/people-list">
