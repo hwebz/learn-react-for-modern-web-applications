@@ -5,7 +5,9 @@ import {
     CounterButtonPage,
     PeopleListPage,
     NotFoundPage,
-    ProtectedPage
+    ProtectedPage,
+    ControlledFormPage,
+    UncontrolledFormPage
   } from './pages'
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <Link to="/counter?startingValue=2">Counter</Link>
       <Link to="/people-list">People List</Link>
       <Link to="/protected">Protected Page</Link>
+      <Link to="/controlled">Controlled Form</Link>
+      <Link to="/uncontrolled">Uncontrolled Form</Link>
       <Switch>
         <Route path="/" exact>
           <HomePage />
@@ -27,6 +31,12 @@ function App() {
         </Route>
         <Route path="/protected">
           <ProtectedPage />
+        </Route>
+        <Route path="/controlled">
+          <ControlledFormPage />
+        </Route>
+        <Route path="/uncontrolled">
+          <UncontrolledFormPage />
         </Route>
         <Route>
           <NotFoundPage />
