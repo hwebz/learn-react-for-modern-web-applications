@@ -50,9 +50,9 @@ function App() {
               </Router>
             </Route>
             <Route path="/user-profile">
-              <UserDataLoader>
+              {/* <UserDataLoader> */}
                 <UserProfilePage />
-              </UserDataLoader>
+              {/* </UserDataLoader> */}
             </Route>
             <Route>
               <NotFoundPage />

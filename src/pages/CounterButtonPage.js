@@ -2,16 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { CounterButton } from '../CounterButton';
 import { CongratulationsMessage } from '../CongratulationsMessage';
 import { DisplayIf } from '../DisplayIf';
+import { usePersistentState } from '../usePersistentState';
 
 export const CounterButtonPage = () => {
-    const [numberOfClicks, setNumberOfClicks] = useState(
-        Number(localStorage.getItem('numberOfClicks')) || 0
-    );
+    const [numberOfClicks, setNumberOfClicks] = usePersistentState('numberOfClicks', 0, Number)
     const [hideMessage, setHideMessage] = useState(false);
-
-    useEffect(() => {
-        localStorage.setItem('numberOfClicks', numberOfClicks);
-    }, [numberOfClicks])
 
     const increment = () => setNumberOfClicks(numberOfClicks + 1);
 
