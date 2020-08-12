@@ -1,30 +1,23 @@
-import React, { useState } from 'react';
-import { CounterButton } from './CounterButton';
-import { Greeting } from './Greeting';
-import { CongratulationsMessage } from './CongratulationsMessage';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { HomePage, CounterButtonPage, PeopleListPage } from './pages'
 
 function App() {
-  const [numberOfClicks, setNumberOfClicks] = useState(0);
-  const [hideMessage, setHideMessage] = useState(false);
-
-  const increment = () => setNumberOfClicks(numberOfClicks + 1);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        {
-          hideMessage
-            ? null
-            : <CongratulationsMessage
-                numberOfClicks={numberOfClicks}
-                threshold={10}
-                onHide={() => setHideMessage(true)}
-              />
-          }
-        <CounterButton numberOfClicks={numberOfClicks} setNumberOfClicks={increment} />
-        <Greeting name="Shaun" numberOfMessages="10" />
-      </header>
-    </div>
+    <Router>
+      <Link to="/">Home</Link>
+      <Link to="/counter">Counter</Link>
+      <Link to="/people-list">People List</Link>
+      <Route path="/" exact>
+        <HomePage />
+      </Route>
+      <Route path="/counter">
+        <CounterButtonPage />
+      </Route>
+      <Route path="/people-list">
+        <PeopleListPage />
+      </Route>
+    </Router>
   );
 }
 
