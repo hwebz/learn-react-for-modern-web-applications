@@ -27,8 +27,8 @@ function App() {
               <HomePage />
             </Route>
             <Route path="/counter">
-              {/* <CounterButtonPage /> */}
-              <CounterButtonPageCB />
+              <CounterButtonPage />
+              {/* <CounterButtonPageCB /> */}
             </Route>
             <Route path="/people-list">
               <PeopleListPage />

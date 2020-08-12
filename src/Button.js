@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
     background-color: ${props => props.buttonColor || 'transparent'};
-    border: 4px solid white;
+    border: 4px solid #333;
     border-radius: 4px;
-    color: white;
+    color: #333;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
