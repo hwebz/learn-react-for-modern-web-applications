@@ -13,6 +13,7 @@ import {
 import { NavBar } from './NavBar';
 import { FormsNavBar } from './FormsNavBar';
 import { CounterButtonPageCB } from './class-based';
+import { UserDataLoader } from './UserDataLoader';
 
 function App() {
   return (
@@ -47,7 +48,9 @@ function App() {
             </Router>
           </Route>
           <Route path="/user-profile">
-            <UserProfilePage />
+            <UserDataLoader>
+              <UserProfilePage />
+            </UserDataLoader>
           </Route>
           <Route>
             <NotFoundPage />
