@@ -7,7 +7,8 @@ import {
     NotFoundPage,
     ProtectedPage,
     ControlledFormPage,
-    UncontrolledFormPage
+    UncontrolledFormPage,
+    UserProfilePage
   } from './pages'
 import { NavBar } from './NavBar';
 import { FormsNavBar } from './FormsNavBar';
@@ -42,6 +43,9 @@ function App() {
                 </Route>
               </Switch>
             </Router>
+          </Route>
+          <Route path="/user-profile">
+            <UserProfilePage />
           </Route>
           <Route>
             <NotFoundPage />
