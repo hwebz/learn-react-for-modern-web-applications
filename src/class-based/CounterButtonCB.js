@@ -2,6 +2,7 @@
 // USE FUNCTIONAL COMPONENTS INSTEAD
 
 import React, { Component } from 'react';
+import { Button } from '../Button';
 
 export class CounterButtonCB extends Component {
     render() {
@@ -10,7 +11,7 @@ export class CounterButtonCB extends Component {
         return (
             <>
                 <p>You've clicked the button {numberOfClicks} times</p>
-                <button onClick={setNumberOfClicks}>Click Me!</button>
+                <Button onClick={setNumberOfClicks}>Click Me!</Button>
             </>
         )
     }

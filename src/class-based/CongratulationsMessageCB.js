@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react';
 import { DisplayIf } from '../DisplayIf';
+import { Button } from '../Button';
 
 export class CongratulationsMessageCB extends Component {
     render() {
@@ -11,7 +12,7 @@ export class CongratulationsMessageCB extends Component {
         return (
             <DisplayIf condition={numberOfClicks >= threshold}>
                 <h1>Congratulations! You've reached {threshold} number of clicks</h1>
-                <button onClick={onHide}>Hide</button>
+                <Button onClick={onHide}>Hide</Button>
             </DisplayIf>
         )
     }

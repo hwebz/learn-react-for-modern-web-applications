@@ -1,4 +1,5 @@
 import React from 'react';
+import { DangerButton } from '../Button';
 
 export const UncontrolledFormPage = () => {
     const nameInput = React.createRef();
@@ -38,7 +39,7 @@ export const UncontrolledFormPage = () => {
                     ref={favoriteColorInput}
                 />
             </div>
-            <button onClick={submitForm}>Submit</button>
+            <DangerButton onClick={submitForm}>Submit</DangerButton>
         </form>
     )
 }

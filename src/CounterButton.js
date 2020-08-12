@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Button } from './Button';
 
 export const CounterButton = ({ numberOfClicks, setNumberOfClicks }) => {
     // Component rendering twice is a feature on dev env only
@@ -15,7 +16,7 @@ export const CounterButton = ({ numberOfClicks, setNumberOfClicks }) => {
     return (
         <>
             <p>You've clicked the button {numberOfClicks} times</p>
-            <button onClick={setNumberOfClicks}>Click Me!</button>
+            <Button onClick={setNumberOfClicks}>Click Me!</Button>
         </>
     )
 }
