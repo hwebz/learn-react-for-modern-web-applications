@@ -18,3 +18,10 @@
     email: '',
     password: ''
 })
+
+## React Boilerplates for Production
+### create-react-app is not suitable for production
+- Next.js (Sticked with Vercel platform to build nextjs)
+- Gastsby
+- reactboilerplate
+- Razzle
